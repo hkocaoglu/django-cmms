@@ -1,0 +1,34 @@
+{% extends '_base.html' %}
+
+{% block title %}Work page{% endblock %}
+
+{% block content %}
+ 
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">ID : </span>
+    <input class="form-control" type="text" value=" {{ object.id }}" aria-label="Disabled input example" readonly>
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Konu : </span>
+    <input class="form-control" type="text" value=" {{ object.name }}" aria-label="Disabled input example" readonly>
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Açıklama : </span>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" readonly>{{ object.detail }}</textarea>
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"> ilk Kayıt : </span>
+    <input class="form-control" type="text" value=" {{ object.dateCreate }}" aria-label="Disabled input example" readonly>
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Güncelleme : </span>
+    <input class="form-control" type="text" value=" {{ object.dateUpdate }}" aria-label="Disabled input example" readonly>
+</div>
+<a href="{% url 'Work_list' %}" class="btn btn-primary " role="button"> OK </a>
+ 
+{% endblock content %}

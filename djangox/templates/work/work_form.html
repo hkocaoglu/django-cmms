@@ -1,0 +1,41 @@
+{% extends '_base.html' %}
+
+{% block title %}About page{% endblock %}
+
+{% block content %}
+
+<h1>Yeni İş Kayıt</h1>
+
+
+<form method="post"class="form-control">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-outline-success" type="submit">Kaydet</button>
+    <a href="{% url 'Work_list' %}" class="btn btn-primary " role="button">Cancel</a>
+</form>
+    {% comment %} <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Konu : </span>
+        <input class="form-control" type="text" value=" {{ object.name }}" aria-label="Disabled input example" >
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Açıklama : </span>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" >{{ object.detail }}</textarea>
+    </div> {% endcomment %}
+
+    {% comment %} <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"> ilk Kayıt : </span>
+        <input class="form-control" type="text" value=" {{ object.dateCreate }}" aria-label="Disabled input example" >
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Güncelleme : </span>
+        <input class="form-control" type="text" value=" {{ object.dateUpdate }}" aria-label="Disabled input example" >
+    </div> {% endcomment %}
+
+
+
+{% comment %} </form> {% endcomment %}
+
+
+{% endblock content %}
