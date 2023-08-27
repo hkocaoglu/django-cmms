@@ -3,14 +3,15 @@
 {% block title %}Work page{% endblock %}
 
 {% block content %}
-<table class="table">
+<table class="table table-sm" >
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Job Name</th>
-        <th scope="col">Date Create</th>
-        <th scope="col">Date Update</th>
-        <th scope="col">Commands</th>
+        <th scope="col" >#</th>
+        <th scope="col">İş Adı</th>
+        <th scope="col">Açıklama</th>
+        <th scope="col">Kayıt</th>
+        <th scope="col">Güncelleme</th>
+        <th scope="col">Komutlar</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
         <tr>
         <th scope="row">{{ work.id }}</th>
         <td>{{ work.name }}</td>
+        <td>{{ work.detail }}</td>
         <td>{{ work.dateCreate }}</td>
         <td>{{ work.dateUpdate }}</td>
         <td>
